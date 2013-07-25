@@ -26,9 +26,11 @@ def main(argv):
   parser.add_argument('-m','--maxthreshold', help='API Percent Used Threshold, integer between 1-99', required=True)
   args = parser.parse_args()
 
+  if int(args.maxthreshold) < 1 or int(args.maxthreshold) > 99:
+    print "You must enter a valid integer from 1-99 for maxthreshold"
+    sys.exit(2)
   pyrax.set_setting("identity_type", "rackspace")
   pyrax.set_credentials(args.username, args.apikey)
-  
   
   getlimit(args.maxthreshold)
 
