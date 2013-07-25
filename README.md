@@ -1,4 +1,4 @@
 API-Limit-Alert
 ===============
 
-Scripts to alert for API Limits being reached
+Scripts/Tools to alert a customer if the API Limits for Rackspace Cloud resources are close to being fully used
